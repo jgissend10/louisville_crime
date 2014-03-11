@@ -15,5 +15,6 @@ router.register(r'incidents', IncidentViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = patterns('',
-    url(r'^', include(router.urls)),
+	url(r'^$', 'louisville_crime.views.dashboard'),
+    url(r'^api/', include(router.urls)),
 )

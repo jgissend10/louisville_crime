@@ -4,7 +4,7 @@ from archiver.conditionals import user_can_manage
 
 class APIOption(NavOption):
     name = u'API'
-    url = '/louisville_crime/'
+    url = '/louisville_crime/api/'
 
 class ManageOption(NavOption):
     """
@@ -23,7 +23,8 @@ class LouisvilleCrimeNav(Nav):
         They can use the NavOption and have the main Nav with their Home state
     """
     name = u'Louisville Crime'
-    view = ''
+    dashboard = True
+    view = 'louisville_crime.views.dashboard'
     icon = 'cog'
     nav_group = 'apis'
     options = [ManageOption, APIOption]
