@@ -16,6 +16,10 @@ class ManageOption(NavOption):
     view = ''
     conditional = {'function': user_can_manage, 'args': [], 'kwargs': {'app_label':'louisville_crime'}}
 
+class DashboardOption(NavOption):
+    name = u'Dashboard'
+    view = 'louisville_crime.views.dashboard'
+
 class LouisvilleCrimeNav(Nav):
     """
         This is a primary Navigation link, Most apps should only define one of these
@@ -23,10 +27,10 @@ class LouisvilleCrimeNav(Nav):
         They can use the NavOption and have the main Nav with their Home state
     """
     name = u'Louisville Crime'
-    view = 'louisville_crime.views.dashboard'
+    #view = 'louisville_crime.views.dashboard'
     icon = 'cog'
     nav_group = 'apis'
-    options = [ManageOption, APIOption]
+    options = [DashboardOption, ManageOption, APIOption]
     conditional = {'function': user_can_see, 'args': [], 'kwargs': {'app_label':'louisville_crime'}}
 
 nav_groups.register(LouisvilleCrimeNav)

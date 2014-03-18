@@ -1,2 +1,39 @@
 {% extends "dashboard-base.html" %}
-{% block content %}Louisville Crime{% endblock %}
+{% load static %}
+{% block content %}
+<div class="page-header">
+  <h1>Louisville Crime <small>Activity of the 5-0 in  502!</small></h1>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="well well-sm">Louisville Crime is a project dedicated to storing a record the crime data for Metro Louisville.</div>
+    </div>
+    <div class="col-md-5">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Project Manager</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="https://lh4.googleusercontent.com/-8ljbRreGGbA/UvgMVYMHSaI/AAAAAAAAMHg/YFEpryv9jwM/s256-no/cd8ad33c-2d24-4af7-a50d-952bd288ab31" name="aboutme" width="100" height="100" class="img-circle img-responsive" />
+            </div>
+            <div class="col-md-8">
+              <p><i class="glyphicon glyphicon-user"></i> James Gissendaner Jr.
+                <br/><i class="glyphicon glyphicon-envelope"></i> {{ "jamestgissendanerjr@gmail.com"|urlize }}
+                <br/><i class="glyphicon glyphicon-globe"></i> <a href="http://www.github.com/jgissend10/">Github</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="github-widget" data-repo="jgissend10/louisville_crime"></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block extrajs %}
+    {{ block.super }}
+    <script src="{% static "jquery.githubRepoWidget.js" %}"></script>
+{% endblock %}
+
