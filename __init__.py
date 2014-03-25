@@ -6,7 +6,6 @@ app_info = {
     'flavor_text' : "Activity of the 5-0 in 502!",
     'description' : "Louisville Crime is a project dedicated to storing a record the crime data for Metro Louisville.",
     'public' : False,
-    'github' : "jgissend10/louisville_crime"
 }
 
 try:
